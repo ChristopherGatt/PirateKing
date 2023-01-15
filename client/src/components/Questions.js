@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Questions from '../../../server/models/questions'
 
 function Questions() {
   const [checked, setChecked] = useState(undefined)
@@ -13,20 +12,27 @@ function Questions() {
 
   return (
     <div className="questions">
-      <h2 className="text">Question 1</h2>
+      <h2 className="text">{question.question}</h2>
 
       <ul key={question.id}>
-        <li>
-          <input
-            type="radio"
-            value={true}
-            name="options"
-            id="g1-option"
-            onChange={onSelect()}
-          />
-          <label className="primary text" htmlFor="q1-option"></label>
-          <div className="check checked"></div>
-        </li>
+        {
+          (question,
+          options.map((q, i) => (
+            <li key={i}>
+              <input
+                type="radio"
+                value={true}
+                name="options"
+                id={`q${i}-option`}
+                onChange={onSelect()}
+              />
+              <label className="primary text" htmlFor={`q${i}-option`}>
+                {q}
+              </label>
+              <div className="check checked"></div>
+            </li>
+          )))
+        }
       </ul>
     </div>
   )
