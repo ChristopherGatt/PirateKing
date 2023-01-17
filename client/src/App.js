@@ -17,9 +17,10 @@ import Nav from './components/Nav'
 import { StoreProvider } from './utils/GlobalState'
 import Success from './pages/Success'
 import OrderHistory from './pages/OrderHistory'
+import Quiz from './pages/Quiz'
 
 import Main from './pages/Main'
-import Game from './pages/Game'
+//import Game from './pages/Game'
 import Score from './pages/Score'
 
 const httpLink = createHttpLink({
@@ -57,9 +58,9 @@ function App() {
               <Route path="/products/:id" element={<Detail />} />
               <Route path="*" element={<NoMatch />} />
 
-              <Route path="/Main" element={<Main />} />
-              <Route path="/Game" element={<Game />} />
-              <Route path="/Score" element={<Score />} />
+              <Route path="/main" element={<Main />} />
+              <Route path="/game" element={<Quiz />} />
+              <Route path="/score" element={<Score />} />
             </Routes>
           </StoreProvider>
         </div>

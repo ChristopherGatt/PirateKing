@@ -1,4 +1,22 @@
-import { gql } from '@apollo/client';
+import { gql } from '@apollo/client'
+
+export const QUERY_QUESTIONS = gql`
+  query getQuestions {
+    questions {
+      question
+      options
+      answer
+    }
+  }
+`
+export const QUERY_SCORE = gql`
+  query getScore {
+    score {
+      name
+      correct
+    }
+  }
+`
 
 export const QUERY_PRODUCTS = gql`
   query getProducts($category: ID) {
@@ -14,7 +32,7 @@ export const QUERY_PRODUCTS = gql`
       }
     }
   }
-`;
+`
 
 export const QUERY_CHECKOUT = gql`
   query getCheckout($products: [ID]!) {
@@ -22,7 +40,7 @@ export const QUERY_CHECKOUT = gql`
       session
     }
   }
-`;
+`
 
 export const QUERY_ALL_PRODUCTS = gql`
   {
@@ -37,7 +55,7 @@ export const QUERY_ALL_PRODUCTS = gql`
       }
     }
   }
-`;
+`
 
 export const QUERY_CATEGORIES = gql`
   {
@@ -46,7 +64,7 @@ export const QUERY_CATEGORIES = gql`
       name
     }
   }
-`;
+`
 
 export const QUERY_USER = gql`
   {
@@ -67,4 +85,4 @@ export const QUERY_USER = gql`
       }
     }
   }
-`;
+`
