@@ -1,11 +1,14 @@
 import { gql } from '@apollo/client'
 
 export const QUERY_QUESTIONS = gql`
-  query getQuestions {
+  query questions {
     questions {
       question
-      options
-      answer
+      answer1
+      answer2
+      answer3
+      answer4
+      correct
     }
   }
 `
@@ -19,8 +22,8 @@ export const QUERY_SCORE = gql`
 `
 
 export const QUERY_PRODUCTS = gql`
-  query getProducts($category: ID) {
-    products(category: $category) {
+  query questions($category: ID) {
+    questions(category: $category) {
       _id
       name
       description
@@ -83,6 +86,14 @@ export const QUERY_USER = gql`
           image
         }
       }
+    }
+  }
+`
+export const QUERY_ME = gql`
+  query me {
+    me {
+      _id
+      email
     }
   }
 `
