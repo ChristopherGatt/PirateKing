@@ -40,14 +40,14 @@ function Game() {
       question: 'What is the biggest Planet in the Milkyway?',
       options: ['Earth', 'Venus', 'Jupiter', 'Saturn'],
     },
-    // {
-    //   question: 'What is the Capital of Germany?',
-    //   options: ['Earth', 'Venus', 'Jupiter', 'Saturn'],
-    // },
-    // {
-    //   question: 'Who was the first Prime Minister of Australia?',
-    //   options: ['Earth', 'Venus', 'Jupiter', 'Saturn'],
-    // },
+    {
+      question: 'What is the Capital of Germany?',
+      options: ['Earth', 'Venus', 'Jupiter', 'Saturn'],
+    },
+    {
+      question: 'Who was the first Prime Minister of Australia?',
+      options: ['Earth', 'Venus', 'Jupiter', 'Saturn'],
+    },
   ]
 
   function nextClick() {

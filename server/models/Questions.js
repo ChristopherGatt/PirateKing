@@ -1,19 +1,26 @@
-const mongoose = require('mongoose')
+const { Schema, model } = require('mongoose')
 
-const { Schema } = mongoose
-
-// Question Model
-const questionsSchema = new Schema({
-  questions: {
-    type: Array,
-    default: [],
+let qaSchema = new Schema({
+  question: {
+    type: String,
   },
-  answers: {
-    type: Array,
-    default: [],
+  answer1: {
+    type: String,
+  },
+  answer2: {
+    type: String,
+  },
+  answer3: {
+    type: String,
+  },
+  answer4: {
+    type: String,
+  },
+  correct: {
+    type: String,
   },
 })
 
-const Questions = mongoose.model('Questions', questionsSchema)
+const QA = model('qa', qaSchema)
 
-module.exports = Questions
+module.exports = QA
