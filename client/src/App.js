@@ -8,20 +8,16 @@ import {
 } from '@apollo/client'
 import { setContext } from '@apollo/client/link/context'
 
+import Nav from './components/Nav'
+import ProtectedRoute from './components/ProtectedRoute'
+
 import Home from './pages/Home'
-import Detail from './pages/Detail'
 import NoMatch from './pages/NoMatch'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
-import Nav from './components/Nav'
-import { StoreProvider } from './utils/GlobalState'
-import Success from './pages/Success'
-import OrderHistory from './pages/OrderHistory'
 import Quiz from './pages/Quiz'
-
-import Main from './pages/Main'
-//import Game from './pages/Game'
-import Score from './pages/Score'
+import ScoreBoard from './pages/ScoreBoard'
+import QuizComplete from './pages/QuizComplete'
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -47,22 +43,54 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div>
-          <StoreProvider>
-            <Nav />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/signup" element={<Signup />} />
-              <Route path="/success" element={<Success />} />
-              <Route path="/orderHistory" element={<OrderHistory />} />
-              <Route path="/products/:id" element={<Detail />} />
-              <Route path="*" element={<NoMatch />} />
+          <Nav />
+          <Routes>
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
 
-              <Route path="/main" element={<Main />} />
-              <Route path="/game" element={<Quiz />} />
-              <Route path="/score" element={<Score />} />
-            </Routes>
-          </StoreProvider>
+            {/* <Route
+                path="/success"
+                element={
+                  <ProtectedRoute>
+                    <Success />
+                  </ProtectedRoute>
+                }
+              /> */}
+            <Route
+              path="/complete"
+              element={
+                <ProtectedRoute>
+                  <QuizComplete />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/"
+              element={
+                <ProtectedRoute>
+                  <Home />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/quiz"
+              element={
+                <ProtectedRoute>
+                  <Quiz />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/scoreboard"
+              element={
+                <ProtectedRoute>
+                  <ScoreBoard />
+                </ProtectedRoute>
+              }
+            />
+
+            <Route path="*" element={<NoMatch />} />
+          </Routes>
         </div>
       </Router>
     </ApolloProvider>

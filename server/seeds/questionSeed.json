@@ -1,137 +1,96 @@
 [
   {
     "question": "Which is a prime number?",
-    "answer1": "8",
-    "answer2": "3",
-    "answer3": "4",
-    "answer4": "6",
-    "correct": "3"
-     
+    "answers": ["8", "3", "4", "6"],
+    "correct": 1
   },
 
   {
     "question": "Who was the first Prime Minister of Australia?",
-    "answer1": "John Howard",
-    "answer2": "Kevin Rudd",
-    "answer3": "Julia Gillard",
-    "answer4": "Edmond Barton",
-    "correct": "Edmond Barton"
+    "answers": ["John Howard", "Kevin Rudd", "Julia Gillard", "Edmond Barton"],
+    "correct": 3
   },
 
   {
-    "question": "Who many players are on a Soccer Team?",
-    "answer1": "10",
-    "answer2": "11",
-    "answer3": "12",
-    "answer4": "13",
-    "correct": "11"
+    "question": "How many players are on a Soccer Team?",
+    "answers": ["10", "11", "12", "13"],
+    "correct": 1
   },
 
   {
     "question": "What is the biggest Planet in the MilkyWay?",
-    "answer1": "Earth",
-    "answer2": "Mars",
-    "answer3": "Saturn",
-    "answer4": "Jupiter",
-    "correct": "Jupiter"
+    "answers": ["Earth", "Mars", "Saturn", "Jupiter"],
+    "correct": 3
   },
 
   {
     "question": "How many countries are there?",
-    "answer1": "195",
-    "answer2": "200",
-    "answer3": "205",
-    "answer4": "215",
-    "correct": "195"
+    "answers": ["195", "200", "205", "215"],
+    "correct": 0
   },
 
   {
     "question": "Who invented the lightbulb?",
-    "answer1": "Albert Einstien",
-    "answer2": "Alexander-Clambell",
-    "answer3": "Humphry Davy",
-    "answer4": "Jack Sparrow",
-    "correct": "Humphry Davy"
+    "answers": [
+      "Albert Einstien",
+      "Alexander-Clambell",
+      "Humphry Davy",
+      "Jack Sparrow"
+    ],
+    "correct": 2
   },
 
   {
     "question": "What day will 31/12/2023 be?",
-    "answer1": "Sunday",
-    "answer2": "Monday",
-    "answer3": "Tuesday",
-    "answer4": "Wednesday",
-    "correct": "Sunday"
+    "answers": ["Sunday", "Monday", "Tuesday", "Wednesday"],
+    "correct": 0
   },
 
   {
     "question": "What is the population of Australia?",
-    "answer1": "20 million",
-    "answer2": "25 million",
-    "answer3": "30 million",
-    "answer4": "35 million",
-    "correct": "25 million"
+    "answers": ["20 million", "25 million", "30 million", "35 million"],
+    "correct": 1
   },
 
   {
     "question": "How fast is a Cheetah's top speed?",
-    "answer1": "100km",
-    "answer2": "115km",
-    "answer3": "130km",
-    "answer4": "145km",
-    "correct": "130km"
+    "answers": ["100km", "115km", "130km", "145km"],
+    "correct": 2
   },
 
   {
     "question": "What year did William Shakespeare die ?",
-    "answer1": "1612",
-    "answer2": "1616",
-    "answer3": "1622",
-    "answer4": "1626",
-    "correct": "1616"
+    "answers": ["1612", "1616", "1622", "1626"],
+    "correct": 1
   },
 
   {
     "question": "Who was the first Prime Minister of Australia?",
-    "answer1": "John Howard",
-    "answer2": "Kevin Rudd",
-    "answer3": "Julia Gillard",
-    "answer4": "Edmond Barton",
-    "correct": "Edmond Barton"
+    "answers": ["John Howard", "Kevin Rudd", "Julia Gillard", "Edmond Barton"],
+    "correct": 3
   },
 
   {
     "question": "How many Stars are on the Australian Flag?",
-    "answer1": "5",
-    "answer2": "6",
-    "answer3": "7",
-    "answer4": "8",
-    "correct": "6"
+    "answers": ["5", "6", "7", "8"],
+    "correct": 1
   },
 
   {
     "question": "Which of these is not a Pokemon?",
-    "answer1": "Mudkip",
-    "answer2": "Treeko",
-    "answer3": "Torchic",
-    "answer4": "Lizardo",
-    "correct": "Lizardo"
+    "answers": ["Mudkip", "Treeko", "Torchic", "Lizardo"],
+    "correct": 3
   },
 
   {
     "question": "Who invented Paypal?",
-    "answer1": "Bill Gates",
-    "answer2": "Steve Jobs",
-    "answer3": "Elon Musk",
-    "answer4": "Peter Parker",
-    "correct": "Elon Musk"
+    "answers": ["Bill Gates", "Steve Jobs", "Elon Musk", "Peter Parker"],
+    "correct": 2
   },
 
   {
     "question": "Who is the best programmer in the world?",
-    "answer1": "Danial Khosravi",
-    "answer2": "Douglas Chan",
-    "answer3": "Tobias",
-    "answer4": "All the Above",
-    "correct": "All the Above"
+    "answers": ["Danial Khosravi", "Douglas Chan", "Tobias", "All the Above"],
+    "correct": 3
   }
 ]

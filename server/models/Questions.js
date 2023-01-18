@@ -1,26 +1,20 @@
 const { Schema, model } = require('mongoose')
 
-let qaSchema = new Schema({
+let questionsSchema = new Schema({
   question: {
     type: String,
   },
-  answer1: {
-    type: String,
-  },
-  answer2: {
-    type: String,
-  },
-  answer3: {
-    type: String,
-  },
-  answer4: {
-    type: String,
-  },
+  //Array
+  answers: [
+    {
+      type: String,
+    },
+  ],
   correct: {
-    type: String,
+    type: Number,
   },
 })
 
-const QA = model('qa', qaSchema)
+const Questions = model('questions', questionsSchema)
 
-module.exports = QA
+module.exports = Questions

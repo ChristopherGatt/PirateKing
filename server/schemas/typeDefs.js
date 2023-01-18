@@ -2,12 +2,16 @@ const { gql } = require('apollo-server-express')
 
 const typeDefs = gql`
   type Question {
+    _id: ID
     question: String
-    answer1: String
-    answer2: String
-    answer3: String
-    answer4: String
-    correct: String
+    answers: [String]
+    correct: Int
+  }
+
+  type Result {
+    question: Question
+    answer: Int
+    correct: Boolean
   }
 
   type User {
@@ -15,6 +19,7 @@ const typeDefs = gql`
     firstName: String
     lastName: String
     email: String
+    results: [Result]
   }
 
   type Auth {
@@ -22,10 +27,22 @@ const typeDefs = gql`
     user: User
   }
 
+  type Score {
+    user: String
+    name: String
+    score: Int
+  }
+
+  type Answer {
+    question: String
+    answer: Int
+    correct: Boolean
+  }
+
   type Query {
     questions: [Question]
-    user: User
     me: User
+    scores: [Score]
   }
 
   type Mutation {
@@ -36,23 +53,11 @@ const typeDefs = gql`
       password: String!
     ): Auth
 
-    addQuestion(
-      question: String!
-      answer1: String!
-      answer2: String!
-      answer3: String!
-      answer4: String!
-      correct: String!
-    ): Question
-
-    updateUser(
-      firstName: String
-      lastName: String
-      email: String
-      password: String
-    ): User
-
     login(email: String!, password: String!): Auth
+
+    addAnswer(question: String!, answer: Int!): Answer
+
+    retakeQuiz: Auth
   }
 `
 
